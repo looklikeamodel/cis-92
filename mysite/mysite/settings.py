@@ -108,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = "en-us"
 
 TIME_ZONE = "America/Los_Angeles"
-# hello
+
 USE_I18N = True
 
 USE_TZ = True
