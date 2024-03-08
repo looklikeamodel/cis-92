@@ -9,7 +9,12 @@ RUN pip install Django==4.2.9
 COPY mysite /mysite
 
 # Set environment variables 
-ENV PORT=8000 
+ENV PORT=8000
+ENV STUDENT_NAME=Yerke
+ENV SITE_NAME=Shop
+ENV SECRET_KEY=
+ENV DEBUG=1
+ENV DATA_DIR=/data 
 
 # Set the working directory
 WORKDIR /mysite 
