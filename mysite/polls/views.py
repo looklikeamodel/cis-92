@@ -1,5 +1,5 @@
 import os 
-import psutilп 
+import psutil
 from django.shortcuts import render 
 
 def site_index(request):
