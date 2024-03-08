@@ -1,7 +1,6 @@
-from django.http import HttpResponse
-from django.shortcuts import render 
 import os 
 import psutil 
+from django.shortcuts import render 
 
 def site_index(request):
     """The default view for our page."""
@@ -13,6 +12,3 @@ def site_index(request):
         'loadavg': psutil.getloadavg(),
     }
     return render(request, "index.html", template_data)
-
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
