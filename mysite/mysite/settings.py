@@ -28,6 +28,9 @@ DEBUG = bool(os.environ.get('DEBUG', True))
 
 ALLOWED_HOSTS = [ "*" ]
 
+# Trust all origins for CSRF validation
+CSRF_TRUSTED_ORIGINS = ['*']
+
 
 # Application definition
 
