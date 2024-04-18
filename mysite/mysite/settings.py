@@ -30,6 +30,8 @@ ALLOWED_HOSTS = [ "*" ]
 
 # Trust all origins for CSRF validation
 CSRF_TRUSTED_ORIGINS = ['https://*.cloudshell.dev', 'https://*.github.dev']
+CSRF_ALLOWED_ORIGINS = ["https://*.github.dev"]
+CORS_ORIGINS_WHITELIST = ["https://*.github.dev"]
 
 
 # Application definition
