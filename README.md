@@ -26,11 +26,11 @@ Follow these step-by-step instructions to deploy your application on a Kubernete
    kubectl apply -f deployment/
 
 2.   Verify that your deployments are correctly running:
-    
+    ```bash
     kubectl get all
 
 3. Check the service to ensure that your application is accessible:
-
+    ```bash
     kubectl get service your_service_name 
 
 
@@ -38,12 +38,12 @@ Deleting Your Application
 To delete your application from the Kubernetes cluster, follow these steps:
 
 1. Delete all resources specified in the deployment configuration:
-
+    ```bash
     kubectl delete -f deployment/
 
 
 2. Confirm that the deployments have been removed:
-    
+    ```bash
     kubectl get all
 
     
