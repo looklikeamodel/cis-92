@@ -25,7 +25,6 @@ Follow these step-by-step instructions to deploy your application on a Kubernete
    ```bash
    kubectl apply -f deployment/
 
-
 2.   Verify that your deployments are correctly running:
     
     kubectl get all
