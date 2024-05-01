@@ -28,7 +28,7 @@ Follow these step-by-step instructions to deploy your application on a Kubernete
 
 3. Check the service to ensure that your application is accessible:
 
-kubectl get service your_service_name   
+    kubectl get service your_service_name   
 
 
 Deleting Your Application
