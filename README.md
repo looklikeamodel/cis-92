@@ -17,10 +17,6 @@ Below are the configuration settings defined in `values-postgres.yaml` with thei
 
 Follow these step-by-step instructions to deploy your application on a Kubernetes cluster:
 
-## Deploying on a Kubernetes Cluster
-
-Follow these step-by-step instructions to deploy your application on a Kubernetes cluster:
-
 1. Apply the Kubernetes configuration files to set up your application:
    ```bash
    kubectl apply -f deployment/
