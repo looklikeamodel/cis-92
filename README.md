@@ -1,37 +1,47 @@
 # My CIS-92 Project 
 
-This repository has the starter code for CIS-92. 
-| Variable Name | Default Value | Short Description                |
-|---------------|---------------|----------------------------------|
-| PORT          | "8000"        | The port on which the site runs. |
-| STUDENT_NAME  | "Yerke"       | The name of the student.         |
-| SITE_NAME     | "*"           | The name of the site.            |
-| DATA_DIR      | "/data"       | The directory for data storage.  |
-| DEBUG         | "1"           | Debug mode toggle (1 for true).  |
+## Configuration Settings
 
-| Variable Name | Default Value           | Short Description            |
-|---------------|-------------------------|------------------------------|
-| SECRET_KEY    | "this-is-a-bad-keyqwerty123" | The secret key for the application. |
+Below are the configuration settings defined in `values-postgres.yaml` with their provided values and descriptions:
+
+| Variable Name      | Default Value                  | Short Description                            |
+|--------------------|--------------------------------|----------------------------------------------|
+| `username`         | `mysiteuser`                   | Username for database authentication.        |
+| `password`         | `this-is-a-bad-password`       | Password for database authentication.        |
+| `database`         | `mysite`                       | Name of the database used by the application.|
+| `postgresPassword` | `another-really-bad-password`  | Password for PostgreSQL database access.     |
+| `cpu_requests`     | `500m`                         | CPU resource request for the application.    |
+| `mem_requests`     | `512Mi`                        | Memory resource request for the application. |
+
+## Deploying on a Kubernetes Cluster
+
+Follow these step-by-step instructions to deploy your application on a Kubernetes cluster:
+
+1. Apply the Kubernetes configuration files to set up your application:
+   
+   ```bash
+   kubectl apply -f deployment/
+
+2.   Verify that your deployments are correctly running:
+    
+    kubectl get all
+
+3. Check the service to ensure that your application is accessible:
+
+kubectl get service your_service_name   
 
 
-- This command reads all .yaml files in the deployment directory and applies them to your Kubernetes cluster, setting up your application’s environment and securing it with necessary secrets.
+Deleting Your Application
+To delete your application from the Kubernetes cluster, follow these steps:
 
-kubectl apply -f deployment/
+1. Delete all resources specified in the deployment configuration:
 
-- This helps you confirm that your application instances are running as expected.
+    kubectl delete -f deployment/
 
-kubectl get deployments (or all)
-
-- This step confirms that your application is up and reachable from outside the Kubernetes cluster.
-
-kubectl get service your_service_name
-
-- This command instructs Kubernetes to delete all resources described in the .yaml files within the deployment directory, effectively removing your application and its related configurations from the cluster.
-
-kubectl delete -f deployment/
-
-- To ensure that all components of your application have been fully removed, you can check the current deployments:
-
-kubectl get deployments
+2. Confirm that the deployments have been removed:
+    
+    kubectl get 
+    
+Note: Replace your_service_name with the actual name of your service when performing operations.
 
 By: looklikeamodel
