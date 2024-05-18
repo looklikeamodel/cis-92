@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: mysite-ing
+spec:
+  rules:
+  - host: "www.looklikeamodel.com"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: mysite-svc
+            port:
+              number: 80
