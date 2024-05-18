@@ -2,9 +2,10 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: mysite-ing
+  annotations: {}
 spec:
   rules:
-  - host: "www.looklikeamodel.com"
+  - host: "www.looklikeamodel.cis92.com"
     http:
       paths:
       - path: /
